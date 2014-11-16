@@ -1,5 +1,4 @@
 ## Laravel Custom Migrations
-=========================
 [![Latest Stable Version](https://poser.pugx.org/codengine/laravel-custom-migrations/version.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Total Downloads](https://poser.pugx.org/codengine/laravel-custom-migrations/d/total.png)](https://packagist.org/packages/codengine/laravel-custom-migrations)
 
 ### Run separate Laravel migrations on multiple databases ###
@@ -11,7 +10,6 @@ It is a bit painful to run each migration independently for each database connec
 **Custom Migrations to the Aid!**
 
 ### Installation ###
-=========================
 Require this package with composer using the following command:
 
     composer require codengine/laravel-custom-migrations
@@ -30,7 +28,6 @@ You should then update the laravel autoload files with
     
     
 ### Configuration ###
-=========================
 In your database.php file, you have to specify the type of the database which will later be used to decide which migrations apply for them. Here is an example:
 
 	'my_customer' => array(
@@ -48,7 +45,6 @@ In your database.php file, you have to specify the type of the database which wi
 The important part is **"migration_type"**. It does not have to be unique.
 
 ### Usage ###
-=========================
 Each migration file needs to be type-hinted as we need to differ between default migrations and custom ones.
 
 You have to specify the type of the migration in your migration class like this:
@@ -63,7 +59,6 @@ You have to specify the type of the migration in your migration class like this:
 It has to be public and should be the same as in your database configuration. If a $type is not specified, the migration will only be used for the default database.
 
 ### Running Custom Migrations ###
-=========================
 As this package only extends the Laravel commands, every command like "migrate", "rollback", "reset" and "refresh" works like it did before.
 
 There is just one difference:
@@ -81,5 +76,4 @@ You can also limit the migration to just one database using the **--database** o
     php artisan migrate --type=customer --database=mySpecialCustomer
 
 ### License
-
 The Laravel Custom Migrations Package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
