@@ -10,6 +10,8 @@ It is a bit painful to run each migration independently for each database connec
 **Custom Migrations to the Aid!**
 
 ### Installation ###
+This package requires at least Laravel v4.1.x and has been tested with Laravel v4.2.x.
+
 Require this package with composer using the following command:
 
     composer require codengine/laravel-custom-migrations
@@ -20,7 +22,7 @@ After updating composer, replace the default Laravel Migration Service Provider
     
 with
     
-    'Codengine\CustomMigrations\CustomMigrationsServiceProvider'
+    'Codengine\CustomMigrations\CustomMigrationsServiceProvider',
     
 You should then update the laravel autoload files with
     
