@@ -1,0 +1,22 @@
+{
+    "name": "codengine/laravel-custom-migrations",
+    "description": "Custom Migrations for Laravel",
+    "keywords": ["laravel", "migration", "database"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Hueg",
+            "email": "hueg@devworld.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Codengine\\CustomMigrations\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
