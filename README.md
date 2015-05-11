@@ -1,5 +1,5 @@
 ## Laravel Custom Migrations
-[![Latest Stable Version](https://poser.pugx.org/codengine/laravel-custom-migrations/version.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Total Downloads](https://poser.pugx.org/codengine/laravel-custom-migrations/d/total.png)](https://packagist.org/packages/codengine/laravel-custom-migrations)
+[![Latest Stable Version](https://poser.pugx.org/codengine/laravel-custom-migrations/version.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Total Downloads](https://poser.pugx.org/codengine/laravel-custom-migrations/d/total.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Build Status](https://travis-ci.org/codengine/laravel-custom-migrations.svg?branch=master)](https://travis-ci.org/codengine/laravel-custom-migrations)
 
 ### Run separate Laravel migrations on multiple databases ###
 
