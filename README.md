@@ -10,7 +10,7 @@ It is a bit painful to run each migration independently for each database connec
 **Custom Migrations to the Aid!**
 
 ### Installation ###
-This package requires at least Laravel v4.1.x and has been tested with Laravel v4.2.x.
+This package requires at least Laravel v4.0.x and has been tested with Laravel v4.x.x.
 
 Require this package with composer using the following command:
 
