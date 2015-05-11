@@ -23,6 +23,16 @@ class Migrator extends \Illuminate\Database\Migrations\Migrator {
 	}
 
 	/**
+	 * Returns the migration type filter
+	 *
+	 * @return string
+	 */
+	public function getMigrationType()
+	{
+		return $this->migrationType;
+	}
+
+	/**
 	 * Resolves the migration and filters those that don't match the migration type
 	 *
 	 * @param string $migration
@@ -52,7 +62,7 @@ class Migrator extends \Illuminate\Database\Migrations\Migrator {
 	 */
 	public function runMigrationList($migrations, $pretend = FALSE)
 	{
-		$this->note("Running " . ($this->migrationType == "default" ? "default" : "custom") . " migration for DB " . $this->connection);
+		$this->note("Running " . ($this->migrationType == "default" ? "default" : "custom") . " migrations for DB " . $this->connection);
 		$migrations = array_filter($migrations, array($this, "filterMigrations"));
 		parent::runMigrationList($migrations, $pretend);
 	}

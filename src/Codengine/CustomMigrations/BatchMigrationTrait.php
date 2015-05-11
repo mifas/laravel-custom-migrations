@@ -21,9 +21,11 @@ trait BatchMigrationTrait {
 	 */
 	protected function getOptions()
 	{
-		return array_merge(parent::getOptions(), array(
+		$optExtend = array(
 			array('type', null, InputOption::VALUE_OPTIONAL, 'The migration type to be executed.', 'default'),
-		));
+		);
+
+		return array_merge(parent::getOptions(), $optExtend);
 	}
 
 	/**
