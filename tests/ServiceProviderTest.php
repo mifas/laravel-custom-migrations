@@ -5,7 +5,7 @@
  */
 
 class ServiceProviderTest extends Orchestra\Testbench\TestCase {
-	protected function getPackageProviders()
+    protected function getPackageProviders($app)
 	{
 		return array(
 			'Codengine\CustomMigrations\CustomMigrationsServiceProvider'
