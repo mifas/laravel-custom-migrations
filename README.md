@@ -16,9 +16,9 @@ To install this package, simply put the following into your `composer.json`
 
 ```json
 {
-    	"require": {
-        	"codengine/laravel-custom-migrations": "1.0.*"
-	}
+    "require": {
+        "codengine/laravel-custom-migrations": "1.0.*"
+    }
 }
 ```
     
