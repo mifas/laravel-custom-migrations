@@ -11,6 +11,6 @@ before_script:
   - travis_retry composer self-update
 
 install:
-   - composer require --dev orchestra/testbench:${ORCHESTRA_VERSION}
+   - composer install --dev
 
 script: phpunit
