@@ -1,5 +1,5 @@
 ## Laravel Custom Migrations
-[![Latest Stable Version](https://poser.pugx.org/codengine/laravel-custom-migrations/version.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Total Downloads](https://poser.pugx.org/codengine/laravel-custom-migrations/d/total.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Build Status](https://travis-ci.org/codengine/laravel-custom-migrations.svg?branch=master)](https://travis-ci.org/codengine/laravel-custom-migrations)
+[![Latest Stable Version](https://poser.pugx.org/codengine/laravel-custom-migrations/version.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Total Downloads](https://poser.pugx.org/codengine/laravel-custom-migrations/d/total.png)](https://packagist.org/packages/codengine/laravel-custom-migrations) [![Build Status](https://travis-ci.org/codengine/laravel-custom-migrations.svg?branch=1.0)](https://travis-ci.org/codengine/laravel-custom-migrations)
 
 ### Run separate Laravel migrations on multiple databases ###
 
@@ -10,7 +10,7 @@ It is a bit painful to run each migration independently for each database connec
 **Custom Migrations to the Aid!**
 
 ### Installation ###
-This package requires at least Laravel v4.0.x and has been tested with Laravel v4.x.x.
+This package requires at least Laravel v4.0.x and has been tested with Laravel v4.1.x and 4.2.x.
 
 Require this package with composer using the following command:
 
