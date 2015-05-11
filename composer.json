@@ -6,12 +6,17 @@
     "authors": [
         {
             "name": "Stefan Hueg",
-            "email": "hueg@devworld.de"
+            "email": "hueg@devworld.de",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~4.1"
+        "illuminate/support": "4.*"
+    },
+    "require-dev": {
+      "orchestra/testbench": "2.2.*",
+      "phpunit/phpunit": "4.6.*"
     },
     "autoload": {
         "psr-0": {
