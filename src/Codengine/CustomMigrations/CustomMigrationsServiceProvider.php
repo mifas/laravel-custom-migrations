@@ -18,11 +18,11 @@ class CustomMigrationsServiceProvider extends MigrationServiceProvider {
 		// The migrator is responsible for actually running and rollback the migration
 		// files in the application. We'll pass in our database connection resolver
 		// so the migrator can resolve any of these connections when it needs to.
-		$this->app->bind('migrator', function($app)
+		$this->app->singleton('migrator', function($app)
 		{
 			$repository = $app['migration.repository'];
 			return new Migrator($repository, $app['db'], $app['files']);
-		}, true);
+		});
 	}
 
 	/**
@@ -32,12 +32,12 @@ class CustomMigrationsServiceProvider extends MigrationServiceProvider {
 	 */
 	protected function registerMigrateCommand()
 	{
-		$this->app->bind('command.migrate', function($app)
+		$this->app->singleton('command.migrate', function($app)
 		{
 			$packagePath = $app['path.base'].'/vendor';
 
 			return new MigrateCommand($app['migrator'], $packagePath);
-		}, true);
+		});
 	}
 
 	/**
@@ -47,10 +47,10 @@ class CustomMigrationsServiceProvider extends MigrationServiceProvider {
 	 */
 	protected function registerRollbackCommand()
 	{
-		$this->app->bind('command.migrate.rollback', function($app)
+		$this->app->singleton('command.migrate.rollback', function($app)
 		{
 			return new RollbackCommand($app['migrator']);
-		}, true);
+		});
 	}
 
 	/**
@@ -60,10 +60,10 @@ class CustomMigrationsServiceProvider extends MigrationServiceProvider {
 	 */
 	protected function registerResetCommand()
 	{
-		$this->app->bind('command.migrate.reset', function($app)
+		$this->app->singleton('command.migrate.reset', function($app)
 		{
 			return new ResetCommand($app['migrator']);
-		}, true);
+		});
 	}
 
 	/**
@@ -73,9 +73,9 @@ class CustomMigrationsServiceProvider extends MigrationServiceProvider {
 	 */
 	protected function registerRefreshCommand()
 	{
-		$this->app->bind('command.migrate.refresh', function()
+		$this->app->singleton('command.migrate.refresh', function()
 		{
 			return new RefreshCommand;
-		}, true);
+		});
 	}
 }

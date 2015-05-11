@@ -7,18 +7,16 @@
 use \Illuminate\Support\Facades\Schema;
 
 class ArtisanDefaultMigrationTest extends Orchestra\Testbench\TestCase {
-	protected $orchestraFixturePath;
 	protected $orchestraFixtureBasePath;
 	protected $testType = 'default';
 
 	public function setUp()
 	{
 		parent::setUp();
-		$this->orchestraFixturePath = $this->app['path'];
-		$this->orchestraFixtureBasePath = $this->app['path.base'];
+		$this->orchestraFixtureBasePath = $this->getBasePath();
 	}
 
-	protected function getPackageProviders()
+	protected function getPackageProviders($app)
 	{
 		return array(
 			'Codengine\CustomMigrations\CustomMigrationsServiceProvider'
@@ -44,19 +42,19 @@ class ArtisanDefaultMigrationTest extends Orchestra\Testbench\TestCase {
 
 	protected function setLaravelPathsForMigration()
 	{
-		$this->app['path'] = str_finish(__DIR__, '');
-		$this->app['path.base'] = str_finish(__DIR__, '') . '/app';
-	}
+		$this->app->setBasePath(realpath(__DIR__));
+    }
 
 	protected function resetLaravelPaths()
 	{
-		$this->app['path'] = $this->orchestraFixturePath;
-		$this->app['path.base'] = $this->orchestraFixtureBasePath;
+        $this->app->setBasePath($this->orchestraFixtureBasePath);
 	}
 
 	protected function getArtisan()
 	{
-		$artisan = $this->app['artisan'];
+        /** @var \Illuminate\Foundation\Console\Kernel $artisan */
+        $artisan = $this->app->make('Illuminate\Contracts\Console\Kernel');
+        $artisan->bootstrap();
 		//getArtisan has to be invoked, else the paths won't work
 		$method = new ReflectionMethod($artisan, 'getArtisan');
 		$method->setAccessible(true);

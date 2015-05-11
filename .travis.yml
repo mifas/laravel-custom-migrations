@@ -10,11 +10,6 @@ php:
 before_script:
   - travis_retry composer self-update
 
-env:
-  - LARAVEL_VERSION="4.0.*" ORCHESTRA_VERSION="2.0.*"
-  - LARAVEL_VERSION="4.1.*" ORCHESTRA_VERSION="2.1.*"
-  - LARAVEL_VERSION="4.2.*" ORCHESTRA_VERSION="2.2.*"
-
 install:
    - composer require --dev orchestra/testbench:${ORCHESTRA_VERSION}
 
