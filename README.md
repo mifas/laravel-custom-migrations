@@ -12,9 +12,15 @@ It is a bit painful to run each migration independently for each database connec
 ### Installation ###
 This package requires at least Laravel v4.0.x and has been tested with Laravel v4.1.x and 4.2.x.
 
-Require this package with composer using the following command:
+To install this package, simply put the following into your `composer.json`
 
-    composer require codengine/laravel-custom-migrations
+```json
+{
+    	"require": {
+        	"codengine/laravel-custom-migrations": "1.0.*"
+	}
+}
+```
     
 After updating composer, replace the default Laravel Migration Service Provider
 
