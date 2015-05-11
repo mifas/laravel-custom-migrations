@@ -64,13 +64,13 @@ class ArtisanDefaultMigrationTest extends Orchestra\Testbench\TestCase {
 		return $artisan;
 	}
 
-	protected function executeDefaultMigration()
+	protected function executeDefaultMigration($parameters = array())
 	{
 		$artisan = $this->getArtisan();
 		$this->setLaravelPathsForMigration();
-		$artisan->call('migrate', array(
+		$artisan->call('migrate', array_merge(array(
 			'--type' => $this->testType
-		));
+		), $parameters));
 		return $artisan;
 	}
 
