@@ -9,9 +9,14 @@ It is a bit painful to run each migration independently for each database connec
 
 **Custom Migrations to the Aid!**
 
-### Installation ###
-This package requires at least Laravel v5.0.x.
+### Compatibility ###
+Laravel Version|Version
+---------------|-------
+4.x            |1.0.*
+5.0            |1.1.*
+5.1            |1.1.*
 
+### Installation ###
 To install this package, simply put the following into your `composer.json`
 
 ```json
