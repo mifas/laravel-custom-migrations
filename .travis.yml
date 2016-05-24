@@ -10,6 +10,6 @@ before_script:
   - travis_retry composer self-update
 
 install:
-   - composer install --dev
+   - composer install
 
 script: phpunit
