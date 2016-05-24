@@ -60,10 +60,10 @@ class Migrator extends \Illuminate\Database\Migrations\Migrator {
 	 * @param array $migrations
 	 * @param bool $pretend
 	 */
-	public function runMigrationList($migrations, $pretend = FALSE)
+	public function runMigrationList($migrations, array $options=[])
 	{
 		$this->note("Running " . ($this->migrationType == "default" ? "default" : "custom") . " migrations for DB " . $this->connection);
 		$migrations = array_filter($migrations, array($this, "filterMigrations"));
-		parent::runMigrationList($migrations, $pretend);
+		parent::runMigrationList($migrations, $options);
 	}
 } 
