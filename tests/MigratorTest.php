@@ -79,7 +79,7 @@ class MigratorTest extends PHPUnit_Framework_TestCase {
 			array('2015_03_05_012634_custom_test_migration', $custom)
 		));
 
-		$this->migrator->runMigrationList($this->migrationList);
+		$this->migrator->runMigrationList($this->migrationList, []);
 	}
 
 	public function testMigratorOnlyExecutesCustomMigration()
@@ -105,6 +105,6 @@ class MigratorTest extends PHPUnit_Framework_TestCase {
 			array('2015_03_05_012634_custom_test_migration', $custom)
 		));
 
-		$this->migrator->runMigrationList($this->migrationList);
+		$this->migrator->runMigrationList($this->migrationList, []);
 	}
 }
