@@ -16,6 +16,7 @@ Laravel Version|Version
 4.x            |1.0.*
 5.0            |1.1.*
 5.1            |1.2.*
+5.2            |1.3.*
 
 ### Installation ###
 To install this package, simply put the following into your `composer.json`
